@@ -11,6 +11,12 @@ app.get("/", async (req, res) => {
     })
 })
 
+app.get("/hello", (req, res) => {
+    res.json({
+        "message": "hello-world!"
+    })
+})
+
 app.post("/", async (req, res) => {
     await prismaClient.user.create({
         data: {
